@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mnmn1212-gfgf.github.io/quran-site",
+  "homepage": "https://mnmn1212-gfgf.github.io/quran-site-indian",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
