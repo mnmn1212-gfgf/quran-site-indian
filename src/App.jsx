@@ -38,10 +38,15 @@ import {
 const ACCENT = "#E7B14C";
 const CTA_DARK = "#2A1038";
 
-const OUTER_GRADIENT =
-  "bg-[linear-gradient(135deg,rgba(27,10,46,0.96)_0%,rgba(58,17,66,0.93)_50%,rgba(110,26,41,0.90)_100%)]";
+const UNIFIED_FRAME_GRADIENT =
+  "bg-[linear-gradient(135deg,rgba(24,8,38,0.98)_0%,rgba(60,22,71,0.96)_52%,rgba(121,34,61,0.94)_100%)]";
+const UNIFIED_FRAME_SOFT =
+  "bg-[linear-gradient(135deg,rgba(44,18,61,0.92)_0%,rgba(86,39,92,0.88)_55%,rgba(121,45,74,0.86)_100%)]";
+const UNIFIED_FRAME_INNER =
+  "bg-[linear-gradient(135deg,rgba(74,40,88,0.34)_0%,rgba(108,52,92,0.24)_100%)]";
+const OUTER_GRADIENT = UNIFIED_FRAME_GRADIENT;
 const INNER_GRADIENT =
-  "bg-[linear-gradient(135deg,rgba(10,7,24,0.97)_0%,rgba(31,10,42,0.93)_100%)]";
+  "bg-[linear-gradient(135deg,rgba(33,13,49,0.97)_0%,rgba(71,26,73,0.94)_56%,rgba(104,31,56,0.92)_100%)]";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -61,9 +66,11 @@ const pulseGlow = {
 const containerClass =
   "relative z-10 mx-auto w-full max-w-[1680px] px-4 sm:px-6 lg:px-10 xl:px-14";
 const glass =
-  "border border-white/10 bg-white/10 md:backdrop-blur-xl backdrop-blur-sm shadow-[0_8px_22px_rgba(0,0,0,0.14)]";
-const softCard = `rounded-[2rem] ${glass}`;
-const gradientOuterCard = `rounded-[2rem] border border-white/10 ${OUTER_GRADIENT} md:backdrop-blur-xl backdrop-blur-sm shadow-[0_8px_22px_rgba(0,0,0,0.14)]`;
+  `border border-white/10 ${UNIFIED_FRAME_SOFT} md:backdrop-blur-xl backdrop-blur-sm shadow-[0_10px_26px_rgba(0,0,0,0.18)]`;
+const softCard = `rounded-[2rem] border border-white/10 ${UNIFIED_FRAME_GRADIENT} md:backdrop-blur-xl backdrop-blur-sm shadow-[0_10px_26px_rgba(0,0,0,0.18)]`;
+const gradientOuterCard = `rounded-[2rem] border border-white/10 ${OUTER_GRADIENT} md:backdrop-blur-xl backdrop-blur-sm shadow-[0_10px_26px_rgba(0,0,0,0.18)]`;
+const unifiedInnerFrame = `border border-white/10 ${UNIFIED_FRAME_INNER}`;
+const unifiedInnerPanel = `border border-white/10 ${UNIFIED_FRAME_SOFT}`;
 
 const navItems = [
   { label: "हमारे बारे में", href: "#about" },
@@ -553,7 +560,7 @@ function HeroAudioPlayer({ isMobile }) {
   };
 
   return (
-    <div className="mt-5 rounded-[1.35rem] border border-white/10 bg-[#140A24]/72 p-3 sm:p-4">
+    <div className={`mt-5 rounded-[1.35rem] ${unifiedInnerPanel} p-3 sm:p-4`}>
       <audio
         ref={audioRef}
         preload="metadata"
@@ -576,7 +583,7 @@ function HeroAudioPlayer({ isMobile }) {
         <button
           type="button"
           onClick={togglePlay}
-          className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+          className={`flex h-10 w-10 items-center justify-center rounded-2xl ${unifiedInnerFrame} text-white transition hover:bg-white/10`}
           aria-label={isPlaying ? "रोकें" : "चलाएँ"}
         >
           {isPlaying ? (
@@ -589,7 +596,7 @@ function HeroAudioPlayer({ isMobile }) {
         <button
           type="button"
           onClick={() => seekBy(-10)}
-          className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+          className={`flex h-10 w-10 items-center justify-center rounded-2xl ${unifiedInnerFrame} text-white transition hover:bg-white/10`}
           aria-label="पीछे जाएँ"
         >
           <SkipBack className="h-4 w-4" style={{ color: ACCENT }} />
@@ -598,7 +605,7 @@ function HeroAudioPlayer({ isMobile }) {
         <button
           type="button"
           onClick={replay}
-          className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+          className={`flex h-10 w-10 items-center justify-center rounded-2xl ${unifiedInnerFrame} text-white transition hover:bg-white/10`}
           aria-label="फिर से चलाएँ"
         >
           <RotateCcw className="h-4 w-4" style={{ color: ACCENT }} />
@@ -607,7 +614,7 @@ function HeroAudioPlayer({ isMobile }) {
         <button
           type="button"
           onClick={() => seekBy(10)}
-          className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+          className={`flex h-10 w-10 items-center justify-center rounded-2xl ${unifiedInnerFrame} text-white transition hover:bg-white/10`}
           aria-label="आगे बढ़ाएँ"
         >
           <SkipForward className="h-4 w-4" style={{ color: ACCENT }} />
@@ -616,7 +623,7 @@ function HeroAudioPlayer({ isMobile }) {
         <button
           type="button"
           onClick={toggleMute}
-          className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+          className={`flex h-10 w-10 items-center justify-center rounded-2xl ${unifiedInnerFrame} text-white transition hover:bg-white/10`}
           aria-label="ध्वनि"
         >
           <Volume2
@@ -679,8 +686,8 @@ function StructuredCard({ icon: Icon, title, desc, isMobile }) {
       whileHover={isMobile ? {} : { y: -6, scale: 1.01 }}
       className={`${gradientOuterCard} h-full p-4 sm:p-5`}
     >
-      <div className="h-full rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
-        <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-gradient-to-l from-white/5 to-white/10 px-4 py-3">
+      <div className={`h-full rounded-[1.5rem] ${unifiedInnerFrame} p-4`}>
+        <div className={`flex items-center gap-3 rounded-2xl ${unifiedInnerPanel} px-4 py-3`}>
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-amber-300/10">
             <Icon className="h-5 w-5" style={{ color: ACCENT }} />
           </div>
@@ -688,7 +695,7 @@ function StructuredCard({ icon: Icon, title, desc, isMobile }) {
             {title}
           </h3>
         </div>
-        <div className="mt-4 rounded-2xl border border-white/10 bg-[#140A24]/72 px-4 py-4 text-sm leading-7 text-white/78 sm:text-base sm:leading-8">
+        <div className={`mt-4 rounded-2xl ${unifiedInnerPanel} px-4 py-4 text-sm leading-7 text-white/78 sm:text-base sm:leading-8`}>
           {desc}
         </div>
       </div>
@@ -702,13 +709,13 @@ function IdentityCard({ icon: Icon, title, text, large = false, isMobile }) {
       whileHover={isMobile ? {} : { y: -6, scale: 1.01 }}
       className={`${softCard} h-full p-4 sm:p-5`}
     >
-      <div className="h-full rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
-        <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-gradient-to-l from-white/5 to-white/10 px-4 py-3">
+      <div className={`h-full rounded-[1.5rem] ${unifiedInnerFrame} p-4`}>
+        <div className={`flex items-center gap-3 rounded-2xl ${unifiedInnerPanel} px-4 py-3`}>
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-amber-300/10">
             <Icon className="h-5 w-5" style={{ color: ACCENT }} />
           </div>
           <div
-            className={`rounded-2xl border border-white/10 bg-white/5 px-4 py-2 font-bold text-white ${
+            className={`rounded-2xl ${unifiedInnerFrame} px-4 py-2 font-bold text-white ${
               large ? "text-lg sm:text-xl" : "text-base sm:text-lg"
             }`}
           >
@@ -716,7 +723,7 @@ function IdentityCard({ icon: Icon, title, text, large = false, isMobile }) {
           </div>
         </div>
         <div
-          className={`mt-4 rounded-2xl border border-white/10 bg-[#140A24]/72 px-4 py-4 text-white/80 ${
+          className={`mt-4 rounded-2xl ${unifiedInnerPanel} px-4 py-4 text-white/80 ${
             large
               ? "text-base leading-8 sm:text-lg sm:leading-9 lg:text-xl lg:leading-10"
               : "text-base leading-8 sm:text-lg"
@@ -735,8 +742,8 @@ function ImpactCard({ icon: Icon, title, desc, isMobile }) {
       whileHover={isMobile ? {} : { y: -6, scale: 1.01 }}
       className={`${softCard} h-full p-4 sm:p-5`}
     >
-      <div className="h-full rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
-        <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-gradient-to-l from-white/5 to-white/10 px-4 py-3">
+      <div className={`h-full rounded-[1.5rem] ${unifiedInnerFrame} p-4`}>
+        <div className={`flex items-center gap-3 rounded-2xl ${unifiedInnerPanel} px-4 py-3`}>
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-rose-200/10">
             <Icon className="h-5 w-5" style={{ color: ACCENT }} />
           </div>
@@ -744,7 +751,7 @@ function ImpactCard({ icon: Icon, title, desc, isMobile }) {
             {title}
           </h3>
         </div>
-        <div className="mt-4 rounded-2xl border border-white/10 bg-[#140A24]/72 px-4 py-4 text-sm leading-7 text-white/78 sm:text-base sm:leading-8">
+        <div className={`mt-4 rounded-2xl ${unifiedInnerPanel} px-4 py-4 text-sm leading-7 text-white/78 sm:text-base sm:leading-8`}>
           {desc}
         </div>
       </div>
@@ -874,7 +881,7 @@ function ProtectedHlsVideoCard({
       whileHover={isMobile ? {} : { y: -6, scale: 1.01 }}
       className={`${softCard} p-3 sm:p-4`}
     >
-      <div className="relative overflow-hidden rounded-[1.4rem] border border-white/10 bg-[#08040F]/70">
+      <div className={`relative overflow-hidden rounded-[1.4rem] ${unifiedInnerPanel}`}>
         <video
           ref={videoRef}
           src={video}
@@ -904,12 +911,12 @@ function ProtectedHlsVideoCard({
         </div>
       </div>
 
-      <div className="mt-4 rounded-[1.3rem] border border-white/10 bg-[#140A24]/72 p-3 sm:p-4">
+      <div className={`mt-4 rounded-[1.3rem] ${unifiedInnerPanel} p-3 sm:p-4`}>
         <div className="flex flex-wrap items-center gap-2">
           <button
             type="button"
             onClick={toggleMute}
-            className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+            className={`flex h-10 w-10 items-center justify-center rounded-2xl ${unifiedInnerFrame} text-white transition hover:bg-white/10`}
             aria-label="ध्वनि बंद या चालू करें"
           >
             <Volume2
@@ -921,7 +928,7 @@ function ProtectedHlsVideoCard({
           <button
             type="button"
             onClick={replayVideo}
-            className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+            className={`flex h-10 w-10 items-center justify-center rounded-2xl ${unifiedInnerFrame} text-white transition hover:bg-white/10`}
             aria-label="फिर से चलाएँ"
           >
             <RotateCcw className="h-4 w-4" style={{ color: ACCENT }} />
@@ -930,7 +937,7 @@ function ProtectedHlsVideoCard({
           <button
             type="button"
             onClick={togglePlay}
-            className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+            className={`flex h-10 w-10 items-center justify-center rounded-2xl ${unifiedInnerFrame} text-white transition hover:bg-white/10`}
             aria-label={isPlaying ? "रोकें" : "चलाएँ"}
           >
             {isPlaying ? (
@@ -1057,7 +1064,7 @@ export default function QuranTranslationLandingPage() {
                   <a
                     key={item.href}
                     href={item.href}
-                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/85 transition hover:border-amber-200/30 hover:bg-white/10 hover:text-amber-100"
+                    className={`rounded-full ${unifiedInnerFrame} px-4 py-2 text-sm font-medium text-white/85 transition hover:border-amber-200/30 hover:bg-white/10 hover:text-amber-100`}
                   >
                     {item.label}
                   </a>
@@ -1067,7 +1074,7 @@ export default function QuranTranslationLandingPage() {
               <button
                 type="button"
                 onClick={() => setMenuOpen((v) => !v)}
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/5 md:hidden"
+                className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ${unifiedInnerFrame} md:hidden`}
               >
                 <Menu className="h-5 w-5" />
               </button>
@@ -1081,7 +1088,7 @@ export default function QuranTranslationLandingPage() {
                       key={item.href}
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
-                      className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/85 sm:text-base"
+                      className={`rounded-2xl ${unifiedInnerFrame} px-4 py-3 text-sm text-white/85 sm:text-base`}
                     >
                       {item.label}
                     </a>
@@ -1203,7 +1210,7 @@ export default function QuranTranslationLandingPage() {
                 transition={isMobile ? {} : { duration: 7, repeat: Infinity, ease: "easeInOut" }}
                 className={`relative mx-auto max-w-2xl p-3 sm:p-4 ${softCard}`}
               >
-                <div className="rounded-[1.6rem] border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-4 sm:p-6">
+                <div className={`rounded-[1.6rem] ${unifiedInnerPanel} p-4 sm:p-6`}>
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <p className="text-xs text-white/60 sm:text-sm">वर्तमान भाषा</p>
@@ -1216,7 +1223,7 @@ export default function QuranTranslationLandingPage() {
                     </div>
                   </div>
 
-                  <div className="mt-6 rounded-[1.4rem] border border-white/10 bg-[#1A0D2E]/78 p-4 sm:mt-8 sm:p-6">
+                  <div className={`mt-6 rounded-[1.4rem] ${unifiedInnerPanel} p-4 sm:mt-8 sm:p-6`}>
                     <div className="mb-4 flex items-start gap-3 text-sm text-white/80 sm:items-center sm:text-base">
                       <Headphones className="mt-0.5 h-5 w-5 shrink-0 text-amber-200 sm:mt-0" />
                       <span>तिलावत सुनें और कुरआन के अर्थों की दृश्य प्रस्तुति देखें</span>
@@ -1243,7 +1250,7 @@ export default function QuranTranslationLandingPage() {
                       {heroCards.map((item) => (
                         <div
                           key={item.label}
-                          className="rounded-2xl border border-white/10 bg-white/5 p-3 sm:p-4"
+                          className={`rounded-2xl ${unifiedInnerFrame} p-3 sm:p-4`}
                         >
                           <div className="text-sm font-bold sm:text-lg" style={{ color: ACCENT }}>
                             {item.value}
@@ -1269,7 +1276,7 @@ export default function QuranTranslationLandingPage() {
                       className="w-full rounded-[1.4rem] border border-white/10 bg-white/10 px-5 py-4 text-center backdrop-blur-md shadow-[0_6px_16px_rgba(0,0,0,0.12)] sm:min-w-[220px] sm:w-auto sm:rounded-[1.6rem]"
                     >
                       <div className="flex items-center justify-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 sm:h-11 sm:w-11">
+                        <div className={`flex h-10 w-10 items-center justify-center rounded-2xl ${unifiedInnerFrame} sm:h-11 sm:w-11`}>
                           <Icon className="h-5 w-5" style={{ color: ACCENT }} />
                         </div>
                         <div className="text-sm font-bold text-white sm:text-base">{item.title}</div>
@@ -1338,8 +1345,8 @@ export default function QuranTranslationLandingPage() {
 
               <div className="relative z-10">
                 <div className="grid gap-6 lg:grid-cols-2 lg:items-stretch lg:gap-8">
-                  <div className="rounded-[1.8rem] border border-white/10 bg-[#140A24]/68 p-4 sm:p-6">
-                    <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
+                  <div className={`rounded-[1.8rem] ${unifiedInnerPanel} p-4 sm:p-6`}>
+                    <div className={`h-full rounded-2xl ${unifiedInnerFrame} p-4 sm:p-5`}>
                       <h2 className="text-2xl font-black sm:text-3xl lg:text-4xl">
                         विश्वसनीय कार्यान्वयन साझेदारी
                       </h2>
@@ -1355,8 +1362,8 @@ export default function QuranTranslationLandingPage() {
                     </div>
                   </div>
 
-                  <div className="rounded-[1.8rem] border border-white/10 bg-[#140A24]/78 p-4 sm:p-6">
-                    <div className="flex h-full flex-col justify-center rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
+                  <div className={`rounded-[1.8rem] ${unifiedInnerPanel} p-4 sm:p-6`}>
+                    <div className={`flex h-full flex-col justify-center rounded-2xl ${unifiedInnerFrame} p-4 sm:p-5`}>
                       <div className="text-sm text-white/60">आधिकारिक वेबसाइट</div>
                       <div className="mt-2 text-xl font-bold sm:text-2xl">Jasco Media City</div>
                       <a
@@ -1564,8 +1571,8 @@ export default function QuranTranslationLandingPage() {
               <div
                 className={`mt-8 rounded-[2rem] p-4 sm:p-6 md:p-8 ${gradientOuterCard}`}
               >
-                <div className="rounded-[2rem] border border-white/10 bg-[#140A24]/78 p-4 sm:p-6">
-                  <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-4 sm:p-5">
+                <div className={`rounded-[2rem] ${unifiedInnerPanel} p-4 sm:p-6`}>
+                  <div className={`rounded-[1.5rem] ${unifiedInnerFrame} p-4 sm:p-5`}>
                     <div className="mb-4 text-xl font-bold sm:text-2xl">हमसे संपर्क करें</div>
                     <div className="space-y-3 text-white/75">
                       <div className="rounded-2xl bg-white/5 px-4 py-3 text-sm sm:text-base">
@@ -1611,16 +1618,16 @@ export default function QuranTranslationLandingPage() {
                     सना... सारी दुनिया के लिए संदेश
                   </div>
 
-                  <p className="mx-auto mt-4 max-w-[30rem] rounded-[1.4rem] border border-white/10 bg-[rgba(58,18,70,0.52)] px-4 py-4 text-sm leading-7 text-white/78 sm:px-5 sm:text-base sm:leading-8">
+                  <p className={`mx-auto mt-4 max-w-[30rem] rounded-[1.4rem] ${unifiedInnerPanel} px-4 py-4 text-sm leading-7 text-white/78 sm:px-5 sm:text-base sm:leading-8`}>
                     कुरआन के अर्थों के अनुवाद के लिए श्रव्य-दृश्य चैनल,
                     एक वक्फ़ परियोजना के रूप में, जो प्रस्तुति की सुंदरता, अर्थ की सटीकता और
                     संदेश की आत्मा को एक साथ लाती है।
                   </p>
                 </div>
 
-                <div className="rounded-[1.6rem] border border-white/10 bg-white/5 p-4 sm:p-5 flex flex-col items-center justify-center text-center">
+                <div className={`rounded-[1.6rem] ${unifiedInnerFrame} p-4 sm:p-5 flex flex-col items-center justify-center text-center`}>
                   <div className="mb-5 flex flex-col items-center justify-center gap-4 text-lg font-bold text-white sm:text-xl">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 shadow-[0_8px_18px_rgba(0,0,0,0.14)]">
+                    <div className={`flex h-14 w-14 items-center justify-center rounded-2xl ${unifiedInnerFrame} shadow-[0_8px_18px_rgba(0,0,0,0.14)]`}>
                       <MessageCircle className="h-6 w-6" style={{ color: ACCENT }} />
                     </div>
                     <span>हमारी जानकारी</span>
@@ -1641,12 +1648,12 @@ export default function QuranTranslationLandingPage() {
                     </div>
                   </div>
 
-                  <div className="mt-6 w-full rounded-[1.4rem] border border-white/10 bg-[#140A24]/68 p-4">
+                  <div className={`mt-6 w-full rounded-[1.4rem] ${unifiedInnerPanel} p-4`}>
                     <a
                       href="https://www.facebook.com/share/1FVbmggbzc/"
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 py-3 text-sm font-semibold text-white transition hover:scale-[1.01] hover:bg-white/10"
+                      className={`flex items-center justify-center gap-2 rounded-xl ${unifiedInnerFrame} py-3 text-sm font-semibold text-white transition hover:scale-[1.01] hover:bg-white/10`}
                     >
                       <Globe className="h-4 w-4" style={{ color: ACCENT }} />
                       हमें फ़ेसबुक पर फ़ॉलो करें
@@ -1658,15 +1665,15 @@ export default function QuranTranslationLandingPage() {
                   </div>
                 </div>
 
-                <div className="rounded-[1.8rem] border border-white/10 bg-[linear-gradient(145deg,rgba(255,255,255,0.08),rgba(120,52,160,0.08))] p-4 backdrop-blur-md sm:p-5 flex flex-col items-center justify-center text-center">
+                <div className={`rounded-[1.8rem] border border-white/10 ${UNIFIED_FRAME_SOFT} p-4 backdrop-blur-md sm:p-5 flex flex-col items-center justify-center text-center`}>
                   <div className="mb-5 flex flex-col items-center justify-center gap-4 text-lg font-bold text-white sm:text-xl">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 shadow-[0_8px_18px_rgba(0,0,0,0.14)]">
+                    <div className={`flex h-14 w-14 items-center justify-center rounded-2xl ${unifiedInnerFrame} shadow-[0_8px_18px_rgba(0,0,0,0.14)]`}>
                       <Link2 className="h-6 w-6" style={{ color: ACCENT }} />
                     </div>
                     <span>हमारे ऐप के लिंक</span>
                   </div>
 
-                  <div className="w-full rounded-[1.4rem] border border-white/10 bg-[#140A24]/68 p-4">
+                  <div className={`w-full rounded-[1.4rem] ${unifiedInnerPanel} p-4`}>
                     <p className="mb-4 text-sm leading-7 text-white/65">
                       ऐप डाउनलोड करें और आधिकारिक प्लेटफ़ॉर्मों के माध्यम से कुरआनी सामग्री को आसानी से
                       फ़ॉलो करना शुरू करें।
@@ -1677,7 +1684,7 @@ export default function QuranTranslationLandingPage() {
                         href="https://play.google.com/store/apps/details?id=com.sana_all&pcampaignid=web_share"
                         target="_blank"
                         rel="noreferrer"
-                        className="group rounded-[1.3rem] border border-white/10 bg-white/5 p-4 transition hover:-translate-y-0.5 hover:bg-white/10"
+                        className={`group rounded-[1.3rem] ${unifiedInnerFrame} p-4 transition hover:-translate-y-0.5 hover:bg-white/10`}
                       >
                         <div className="flex items-center justify-center gap-3">
                           <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-amber-300/10 text-white">
@@ -1693,7 +1700,7 @@ export default function QuranTranslationLandingPage() {
                         href="https://apps.apple.com/us/app/sana-tv-%D8%B3%D9%86%D8%A7/id6742054715"
                         target="_blank"
                         rel="noreferrer"
-                        className="group rounded-[1.3rem] border border-white/10 bg-white/5 p-4 transition hover:-translate-y-0.5 hover:bg-white/10"
+                        className={`group rounded-[1.3rem] ${unifiedInnerFrame} p-4 transition hover:-translate-y-0.5 hover:bg-white/10`}
                       >
                         <div className="flex items-center justify-center gap-3">
                           <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-rose-200/10 text-white">
@@ -1706,7 +1713,7 @@ export default function QuranTranslationLandingPage() {
                       </a>
                     </div>
 
-                    <div className="mt-5 rounded-[1.4rem] border border-white/10 bg-[#1A0D2E]/72 p-4">
+                    <div className={`mt-5 rounded-[1.4rem] ${unifiedInnerPanel} p-4`}>
                       <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-white/65">
                         <span>⭐ 4.9 रेटिंग</span>
                         <span>🌍 100+ देश</span>
