@@ -1596,7 +1596,7 @@ export default function QuranTranslationLandingPage() {
             <div className={`rounded-[2rem] px-4 py-6 sm:px-6 sm:py-8 lg:px-10 ${glass}`}>
               <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr_1fr]">
                 <div
-                  className={`rounded-[1.8rem] border border-white/10 p-4 text-center sm:p-6 ${INNER_GRADIENT} flex h-full flex-col items-center justify-center`}
+                  className={`${softCard} p-4 text-center sm:p-6 flex h-full flex-col items-center justify-center`}
                 >
                   <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-white/15 bg-white/10 shadow-[0_0_18px_rgba(255,255,255,0.06)] backdrop-blur-md sm:h-24 sm:w-24">
                     <img
@@ -1625,7 +1625,7 @@ export default function QuranTranslationLandingPage() {
                   </p>
                 </div>
 
-                <div className={`rounded-[1.6rem] ${unifiedInnerFrame} p-4 sm:p-5 flex flex-col items-center justify-center text-center`}>
+                <div className={`${softCard} p-4 sm:p-5 flex flex-col items-center justify-center text-center`}>
                   <div className="mb-5 flex flex-col items-center justify-center gap-4 text-lg font-bold text-white sm:text-xl">
                     <div className={`flex h-14 w-14 items-center justify-center rounded-2xl ${unifiedInnerFrame} shadow-[0_8px_18px_rgba(0,0,0,0.14)]`}>
                       <MessageCircle className="h-6 w-6" style={{ color: ACCENT }} />
@@ -1665,7 +1665,7 @@ export default function QuranTranslationLandingPage() {
                   </div>
                 </div>
 
-                <div className={`rounded-[1.8rem] border border-white/10 ${UNIFIED_FRAME_SOFT} p-4 backdrop-blur-md sm:p-5 flex flex-col items-center justify-center text-center`}>
+                <div className={`${softCard} p-4 sm:p-5 flex flex-col items-center justify-center text-center`}>
                   <div className="mb-5 flex flex-col items-center justify-center gap-4 text-lg font-bold text-white sm:text-xl">
                     <div className={`flex h-14 w-14 items-center justify-center rounded-2xl ${unifiedInnerFrame} shadow-[0_8px_18px_rgba(0,0,0,0.14)]`}>
                       <Link2 className="h-6 w-6" style={{ color: ACCENT }} />
