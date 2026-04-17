@@ -61,138 +61,138 @@ const pulseGlow = {
 const containerClass =
   "relative z-10 mx-auto w-full max-w-[1680px] px-4 sm:px-6 lg:px-10 xl:px-14";
 const glass =
-  `border border-white/10 ${FRAME_GRADIENT} md:backdrop-blur-xl backdrop-blur-sm shadow-[0_8px_22px_rgba(0,0,0,0.14)]`;
+  "border border-white/10 bg-white/10 md:backdrop-blur-xl backdrop-blur-sm shadow-[0_8px_22px_rgba(0,0,0,0.14)]";
 const softCard = `rounded-[2rem] ${glass}`;
 const gradientOuterCard = `rounded-[2rem] border border-white/10 ${OUTER_GRADIENT} md:backdrop-blur-xl backdrop-blur-sm shadow-[0_8px_22px_rgba(0,0,0,0.14)]`;
 
 const navItems = [
-  { label: "من نحن", href: "#about" },
-  { label: "المميزات", href: "#features" },
-  { label: "أعمالنا", href: "#portfolio" },
-  { label: "شركاء النجاح", href: "#partners" },
-  { label: "تواصل معنا", href: "#contact" },
+  { label: "हमारे बारे में", href: "#about" },
+  { label: "विशेषताएँ", href: "#features" },
+  { label: "हमारे कार्य", href: "#portfolio" },
+  { label: "सफलता के भागीदार", href: "#partners" },
+  { label: "संपर्क करें", href: "#contact" },
 ];
 
 const stats = [
-  { value: "+100", label: "لغة عالمية مستهدفة" },
-  { value: "24/7", label: "وصول عالمي مستمر" },
-  { value: "114", label: "سورة كاملة" },
-  { value: "HQ", label: "جودة صوت وصورة عالية" },
+  { value: "+100", label: "लक्षित वैश्विक भाषाएँ" },
+  { value: "24/7", label: "निरंतर वैश्विक पहुँच" },
+  { value: "114", label: "पूर्ण सूरह" },
+  { value: "HQ", label: "उच्च ऑडियो एवं वीडियो गुणवत्ता" },
 ];
 
 const heroCards = [
-  { value: "114", label: "سورة كاملة" },
-  { value: "30", label: "جزءًا من القرآن" },
-  { value: "متقن", label: "عرض سمعي بصري" },
+  { value: "114", label: "पूर्ण सूरह" },
+  { value: "30", label: "कुरआन के 30 पारों में" },
+  { value: "उत्कृष्ट", label: "श्रव्य-दृश्य प्रस्तुति" },
 ];
 
 const heroBadges = [
-  { icon: Sparkles, title: "نور وجمال القرآن" },
-  { icon: Globe, title: "رسالة إلى العالم" },
+  { icon: Sparkles, title: "कुरआन का प्रकाश और सौंदर्य" },
+  { icon: Globe, title: "दुनिया के लिए संदेश" },
 ];
 
 const identityCards = [
   {
     icon: Users,
-    title: "من نحن",
-    text: "سنا مشروع وقفي يهدف إلى نشر معاني القرآن الكريم إلى العالم، عبر قنوات صوتية ومرئية تجمع بين التلاوة العذبة والترجمة الدقيقة، لنقدم تجربة إيمانية متكاملة تُقرب كلام الله إلى القلوب بمختلف لغات العالم.",
+    title: "हमारे बारे में",
+    text: "सना एक वक्फ़ परियोजना है जिसका उद्देश्य कुरआन के अर्थों को दुनिया तक पहुँचाना है। यह श्रव्य और दृश्य माध्यमों के द्वारा मधुर तिलावत और सटीक अनुवाद को एक साथ प्रस्तुत करती है, ताकि एक समग्र आध्यात्मिक अनुभव दिया जा सके जो अल्लाह के कलाम को दुनिया की विभिन्न भाषाओं में लोगों के दिलों तक पहुँचाए।",
   },
   {
     icon: Eye,
-    title: "الرؤية",
-    text: "أن نكون منصة عالمية رائدة في إيصال معاني القرآن الكريم إلى كل إنسان بلغته، بأسلوب عصري يجمع بين الجمال والإتقان والتقنية الحديثة.",
+    title: "दृष्टि",
+    text: "हमारी दृष्टि है कि हम एक अग्रणी वैश्विक मंच बनें जो हर व्यक्ति तक उसकी भाषा में कुरआन के अर्थ पहुँचाए, आधुनिक शैली में जो सौंदर्य, उत्कृष्टता और आधुनिक तकनीक को एक साथ लाए।",
   },
   {
     icon: Target,
-    title: "الرسالة",
-    text: "تقديم محتوى قرآني صوتي ومرئي مترجم، يتيح فهم معاني القرآن الكريم بوضوح وسهولة، ويساهم في نشر الهداية وتعريف العالم بكلام الله بأسلوب مؤثر وجذاب.",
+    title: "मिशन",
+    text: "अनूदित श्रव्य और दृश्य कुरआनी सामग्री प्रस्तुत करना, जिससे कुरआन के अर्थों को स्पष्ट और सरल रूप से समझा जा सके, और जो प्रभावशाली तथा आकर्षक शैली में हिदायत के संदेश को फैलाने में सहायक हो।",
   },
 ];
 
 const features = [
   {
     icon: Languages,
-    title: "ترجمات متعددة اللغات",
-    desc: "إيصال معاني القرآن الكريم إلى الشعوب بلغاتهم، بأسلوب واضح ودقيق يراعي المعنى والرسالة.",
+    title: "बहुभाषी अनुवाद",
+    desc: "कुरआन के अर्थों को विभिन्न समुदायों तक उनकी भाषाओं में स्पष्ट और सटीक शैली में पहुँचाना, जो संदेश और भाव को सुरक्षित रखे।",
   },
   {
     icon: Headphones,
-    title: "تجربة سمعية وبصرية متكاملة",
-    desc: "قنوات تجمع بين التلاوة المؤثرة والنص المترجم في تجربة هادئة تليق بجلال القرآن الكريم.",
+    title: "समग्र श्रव्य-दृश्य अनुभव",
+    desc: "ऐसे चैनल जो प्रभावशाली तिलावत और अनूदित पाठ को एक शांत एवं गरिमामय अनुभव में प्रस्तुत करते हैं, जो कुरआन की महानता के अनुरूप हो।",
   },
   {
     icon: Globe,
-    title: "انتشار عالمي مستمر",
-    desc: "حضور رقمي وفضائي يفتح أبواب الوصول إلى مختلف القارات والمنصات على مدار الساعة.",
+    title: "निरंतर वैश्विक प्रसार",
+    desc: "डिजिटल और प्रसारण उपस्थिति जो विभिन्न महाद्वीपों और प्लेटफ़ॉर्मों तक चौबीसों घंटे पहुँच सुनिश्चित करती है।",
   },
   {
     icon: HeartHandshake,
-    title: "وقف لله تعالى",
-    desc: "رسالة دعوية عالمية يشارك في أجرها كل من يساهم في نشرها أو دعمها أو ينتفع بها.",
+    title: "अल्लाह के लिए वक्फ़",
+    desc: "एक वैश्विक दावती संदेश, जिसके पुण्य में हर वह व्यक्ति सहभागी होता है जो इसके प्रसार, समर्थन या लाभ में भाग लेता है।",
   },
 ];
 
 const channels = [
   {
     icon: Radio,
-    title: "القنوات الفضائية والإذاعية",
-    desc: "نشر معاني القرآن الكريم عبر قنوات صوتية ومرئية تصل إلى مختلف الشعوب بلغاتها.",
+    title: "टीवी और रेडियो चैनल",
+    desc: "कुरआन के अर्थों को श्रव्य और दृश्य चैनलों के माध्यम से विभिन्न समुदायों तक उनकी भाषाओं में पहुँचाना।",
   },
   {
     icon: MonitorPlay,
-    title: "منصات التواصل الاجتماعي والمواقع الإلكترونية",
-    desc: "حضور رقمي متجدد يسهّل الوصول إلى المحتوى القرآني ونشره على نطاق واسع.",
+    title: "सोशल मीडिया और वेबसाइट प्लेटफ़ॉर्म",
+    desc: "निरंतर अद्यतन डिजिटल उपस्थिति जो कुरआनी सामग्री तक पहुँच और उसके व्यापक प्रसार को आसान बनाती है।",
   },
   {
     icon: Layers3,
-    title: "تطبيقات ووسائط رقمية متنوعة",
-    desc: "تجربة حديثة ومتنوعة تتيح متابعة المحتوى القرآني بأساليب تناسب مختلف الأجهزة والمنصات.",
+    title: "विविध डिजिटल ऐप और माध्यम",
+    desc: "एक आधुनिक और विविध अनुभव, जो विभिन्न उपकरणों और प्लेटफ़ॉर्मों के अनुरूप कुरआनी सामग्री तक पहुँच प्रदान करता है।",
   },
 ];
 
 const partners = [
   {
     icon: ShieldCheck,
-    title: "الهيئات الشرعية والمؤسسات الإسلامية",
-    desc: "التي ساهمت في تقديم ترجمات معتمدة لمعاني القرآن الكريم، بما يضمن الدقة والتأصيل الشرعي.",
+    title: "शरई संस्थाएँ और इस्लामी संगठन",
+    desc: "जिन्होंने कुरआन के अर्थों के प्रमाणित अनुवाद उपलब्ध कराने में योगदान दिया, ताकि सटीकता और शरई प्रामाणिकता सुनिश्चित हो सके।",
   },
   {
     icon: Mic2,
-    title: "القرّاء المؤثرون ذوو الأصوات الندية",
-    desc: "الذين أثروا المشروع بتلاوات خاشعة ومؤثرة، تصل إلى القلوب بأسلوب محبب وجذاب.",
+    title: "प्रभावशाली क़ारी और मधुर आवाज़ें",
+    desc: "जिन्होंने विनम्र और प्रभावशाली तिलावत के माध्यम से इस परियोजना को समृद्ध किया, जो दिलों तक प्रेमपूर्ण और आकर्षक ढंग से पहुँचती है।",
   },
   {
     icon: Headphones,
-    title: "شركات الإنتاج الصوتي والتقني",
-    desc: "التي وفّرت تسجيلات عالية الجودة ومعالجة صوتية وبصرية احترافية.",
+    title: "ऑडियो और तकनीकी प्रोडक्शन कंपनियाँ",
+    desc: "जिन्होंने उच्च गुणवत्ता वाली रिकॉर्डिंग और पेशेवर ऑडियो-विज़ुअल प्रोसेसिंग उपलब्ध कराई।",
   },
   {
     icon: Users,
-    title: "المنتجون والمتطوعون",
-    desc: "الذين ساهموا في تطوير المحتوى ونشره، ليصل إلى أكبر شريحة ممكنة حول العالم.",
+    title: "निर्माता और स्वयंसेवक",
+    desc: "जिन्होंने सामग्री के विकास और उसके प्रसार में योगदान दिया, ताकि यह दुनिया भर में अधिकतम लोगों तक पहुँच सके।",
   },
 ];
 
 const impactCards = [
   {
     icon: Globe,
-    title: "وصول عالمي",
-    desc: "وصلت رسالة القرآن الكريم إلى بيوت في مختلف دول العالم، بلغات متعددة تُخاطب الناس بلغتهم الأم.",
+    title: "वैश्विक पहुँच",
+    desc: "कुरआन का संदेश दुनिया के कई देशों के घरों तक पहुँचा है, अनेक भाषाओं में जो लोगों से उनकी मातृभाषा में संवाद करती हैं।",
   },
   {
     icon: Languages,
-    title: "ترجمات موثوقة",
-    desc: "تم توفير ترجمات دقيقة لمعاني القرآن الكريم بإشراف جهات علمية موثوقة لضمان صحة المعنى.",
+    title: "विश्वसनीय अनुवाद",
+    desc: "कुरआन के अर्थों के सटीक अनुवाद विश्वसनीय विद्वत संस्थाओं की देखरेख में उपलब्ध कराए गए हैं, ताकि अर्थ की शुद्धता बनी रहे।",
   },
   {
     icon: Headphones,
-    title: "تجربة متكاملة",
-    desc: "محتوى يجمع بين التلاوة الخاشعة والترجمة المرئية ليمنح تجربة إيمانية مؤثرة وسهلة الفهم.",
+    title: "समग्र अनुभव",
+    desc: "ऐसी सामग्री जो विनम्र तिलावत और दृश्य अनुवाद को जोड़ती है, ताकि प्रभावशाली और आसानी से समझ में आने वाला आध्यात्मिक अनुभव मिल सके।",
   },
   {
     icon: Send,
-    title: "رسالة ممتدة",
-    desc: "يساهم المشروع في نشر الهداية وتعريف العالم بكلام الله بأسلوب عصري يصل إلى مختلف الفئات.",
+    title: "लगातार फैलता संदेश",
+    desc: "यह परियोजना हिदायत के प्रसार और अल्लाह के कलाम से दुनिया का परिचय कराने में आधुनिक शैली से योगदान देती है, जो विभिन्न वर्गों तक पहुँचती है।",
   },
 ];
 
@@ -219,7 +219,7 @@ function sectionBadge(icon, text, textColor = "text-white") {
   const Icon = icon;
   return (
     <div
-      className={`inline-flex max-w-full items-center gap-3 rounded-full border border-white/10 ${FRAME_INSET} px-4 py-2.5 text-xs font-semibold ${textColor} backdrop-blur-md shadow-[0_6px_18px_rgba(0,0,0,0.14)] sm:px-5 sm:py-3 sm:text-sm`}
+      className={`inline-flex max-w-full items-center gap-3 rounded-full border border-white/10 bg-white/10 px-4 py-2.5 text-xs font-semibold ${textColor} backdrop-blur-md shadow-[0_6px_18px_rgba(0,0,0,0.14)] sm:px-5 sm:py-3 sm:text-sm`}
     >
       <Icon className="h-4 w-4 sm:h-5 sm:w-5" style={{ color: ACCENT }} />
       <span className="truncate">{text}</span>
@@ -230,7 +230,7 @@ function sectionBadge(icon, text, textColor = "text-white") {
 function LargeSectionBadge({ icon: Icon, text }) {
   return (
     <div
-      className={`inline-flex max-w-full items-center gap-3 rounded-full border border-white/10 ${FRAME_INSET} px-5 py-3 text-base font-bold backdrop-blur-md shadow-[0_6px_18px_rgba(0,0,0,0.14)] sm:px-8 sm:py-4 sm:text-xl lg:text-2xl`}
+      className="inline-flex max-w-full items-center gap-3 rounded-full border border-white/10 bg-white/10 px-5 py-3 text-base font-bold backdrop-blur-md shadow-[0_6px_18px_rgba(0,0,0,0.14)] sm:px-8 sm:py-4 sm:text-xl lg:text-2xl"
       style={{ color: ACCENT }}
     >
       <Icon className="h-5 w-5 shrink-0 sm:h-7 sm:w-7" style={{ color: ACCENT }} />
@@ -577,7 +577,7 @@ function HeroAudioPlayer({ isMobile }) {
           type="button"
           onClick={togglePlay}
           className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
-          aria-label={isPlaying ? "إيقاف مؤقت" : "تشغيل"}
+          aria-label={isPlaying ? "रोकें" : "चलाएँ"}
         >
           {isPlaying ? (
             <Pause className="h-4 w-4" style={{ color: ACCENT }} />
@@ -590,7 +590,7 @@ function HeroAudioPlayer({ isMobile }) {
           type="button"
           onClick={() => seekBy(-10)}
           className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
-          aria-label="تأخير"
+          aria-label="पीछे जाएँ"
         >
           <SkipBack className="h-4 w-4" style={{ color: ACCENT }} />
         </button>
@@ -599,7 +599,7 @@ function HeroAudioPlayer({ isMobile }) {
           type="button"
           onClick={replay}
           className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
-          aria-label="إعادة التشغيل"
+          aria-label="फिर से चलाएँ"
         >
           <RotateCcw className="h-4 w-4" style={{ color: ACCENT }} />
         </button>
@@ -608,7 +608,7 @@ function HeroAudioPlayer({ isMobile }) {
           type="button"
           onClick={() => seekBy(10)}
           className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
-          aria-label="تقديم"
+          aria-label="आगे बढ़ाएँ"
         >
           <SkipForward className="h-4 w-4" style={{ color: ACCENT }} />
         </button>
@@ -617,7 +617,7 @@ function HeroAudioPlayer({ isMobile }) {
           type="button"
           onClick={toggleMute}
           className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
-          aria-label="الصوت"
+          aria-label="ध्वनि"
         >
           <Volume2
             className={`h-4 w-4 ${muted ? "opacity-50" : ""}`}
@@ -679,8 +679,8 @@ function StructuredCard({ icon: Icon, title, desc, isMobile }) {
       whileHover={isMobile ? {} : { y: -6, scale: 1.01 }}
       className={`${gradientOuterCard} h-full p-4 sm:p-5`}
     >
-      <div className={`h-full rounded-[1.5rem] border border-white/10 ${FRAME_INSET} p-4`}>
-        <div className={`flex items-center gap-3 rounded-2xl border border-white/10 ${FRAME_INSET} px-4 py-3`}>
+      <div className="h-full rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
+        <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-gradient-to-l from-white/5 to-white/10 px-4 py-3">
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-emerald-300/10">
             <Icon className="h-5 w-5" style={{ color: ACCENT }} />
           </div>
@@ -702,8 +702,8 @@ function IdentityCard({ icon: Icon, title, text, large = false, isMobile }) {
       whileHover={isMobile ? {} : { y: -6, scale: 1.01 }}
       className={`${softCard} h-full p-4 sm:p-5`}
     >
-      <div className={`h-full rounded-[1.5rem] border border-white/10 ${FRAME_INSET} p-4`}>
-        <div className={`flex items-center gap-3 rounded-2xl border border-white/10 ${FRAME_INSET} px-4 py-3`}>
+      <div className="h-full rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
+        <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-gradient-to-l from-white/5 to-white/10 px-4 py-3">
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-emerald-300/10">
             <Icon className="h-5 w-5" style={{ color: ACCENT }} />
           </div>
@@ -735,8 +735,8 @@ function ImpactCard({ icon: Icon, title, desc, isMobile }) {
       whileHover={isMobile ? {} : { y: -6, scale: 1.01 }}
       className={`${softCard} h-full p-4 sm:p-5`}
     >
-      <div className={`h-full rounded-[1.5rem] border border-white/10 ${FRAME_INSET} p-4`}>
-        <div className={`flex items-center gap-3 rounded-2xl border border-white/10 ${FRAME_INSET} px-4 py-3`}>
+      <div className="h-full rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
+        <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-gradient-to-l from-white/5 to-white/10 px-4 py-3">
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-yellow-100/10">
             <Icon className="h-5 w-5" style={{ color: ACCENT }} />
           </div>
@@ -891,7 +891,7 @@ function ProtectedHlsVideoCard({
             type="button"
             onClick={togglePlay}
             className="absolute inset-0 flex items-center justify-center bg-black/15 transition hover:bg-black/10"
-            aria-label="تشغيل الفيديو"
+            aria-label="वीडियो चलाएँ"
           >
             <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md shadow-[0_0_22px_rgba(16,185,129,0.16)] sm:h-18 sm:w-18">
               <Play className="mr-1 h-7 w-7 text-white" />
@@ -900,7 +900,7 @@ function ProtectedHlsVideoCard({
         )}
 
         <div className="pointer-events-none absolute left-3 top-3 rounded-full border border-white/10 bg-black/35 px-3 py-1 text-[11px] text-white/80 backdrop-blur-md">
-          {isReady ? "الصورة ظاهرة قبل التشغيل" : "جارِ تجهيز المعاينة"}
+          {isReady ? "चलाने से पहले पूर्वावलोकन दिखाई दे रहा है" : "पूर्वावलोकन तैयार किया जा रहा है"}
         </div>
       </div>
 
@@ -910,7 +910,7 @@ function ProtectedHlsVideoCard({
             type="button"
             onClick={toggleMute}
             className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
-            aria-label="كتم الصوت أو تشغيله"
+            aria-label="ध्वनि बंद या चालू करें"
           >
             <Volume2
               className={`h-4 w-4 ${muted ? "opacity-50" : ""}`}
@@ -922,7 +922,7 @@ function ProtectedHlsVideoCard({
             type="button"
             onClick={replayVideo}
             className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
-            aria-label="إعادة التشغيل"
+            aria-label="फिर से चलाएँ"
           >
             <RotateCcw className="h-4 w-4" style={{ color: ACCENT }} />
           </button>
@@ -931,7 +931,7 @@ function ProtectedHlsVideoCard({
             type="button"
             onClick={togglePlay}
             className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
-            aria-label={isPlaying ? "إيقاف مؤقت" : "تشغيل"}
+            aria-label={isPlaying ? "रोकें" : "चलाएँ"}
           >
             {isPlaying ? (
               <Pause className="h-4 w-4" style={{ color: ACCENT }} />
@@ -1012,7 +1012,7 @@ export default function QuranTranslationLandingPage() {
   return (
     <LazyMotion features={domAnimation}>
       <div
-        dir="rtl"
+        dir="ltr"
         className="relative min-h-screen overflow-hidden bg-transparent text-white"
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.18),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(250,204,21,0.14),transparent_22%),radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.14),transparent_24%),linear-gradient(180deg,#020617_0%,#04120f_40%,#031b17_100%)]" />
@@ -1041,14 +1041,14 @@ export default function QuranTranslationLandingPage() {
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-yellow-100/20 bg-white/10 shadow-[0_0_16px_rgba(16,185,129,0.16)] sm:h-16 sm:w-16">
                   <img
                     src={sanaLogo}
-                    alt="شعار قنوات سنا القرآنية"
+                    alt="सना कुरआनी चैनलों का लोगो"
                     className="h-full w-full object-cover"
                     loading="eager"
                     decoding="async"
                   />
                 </div>
                 <div className="truncate text-sm font-bold tracking-wide sm:text-xl">
-                  قنوات سنا القرآنية
+                  सना कुरआनी चैनल
                 </div>
               </div>
 
@@ -1102,7 +1102,7 @@ export default function QuranTranslationLandingPage() {
                 style={{ color: ACCENT }}
               >
                 <Stars className="h-4 w-4" style={{ color: ACCENT }} />
-                <span>سنا...بلاغ للعالمين</span>
+                <span>सना... सारी दुनिया के लिए संदेश</span>
               </motion.div>
 
               <motion.h1
@@ -1113,7 +1113,7 @@ export default function QuranTranslationLandingPage() {
                 className="text-3xl font-black leading-[1.25] sm:text-5xl lg:text-7xl"
               >
                 <span className="block bg-gradient-to-l from-[#F3E7B3] via-emerald-100 to-yellow-100 bg-clip-text text-transparent">
-                  قنوات سنا القرآنية
+                  सना कुरआनी चैनल
                 </span>
               </motion.h1>
 
@@ -1124,7 +1124,7 @@ export default function QuranTranslationLandingPage() {
                 variants={fadeUp}
                 className="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8 lg:text-xl"
               >
-                قنوات صوتية مرئية لترجمات معاني القرآن الكريم لجميع اللغات العالمية - وقف لله تعالى.
+                कुरआन के अर्थों के अनुवाद के लिए श्रव्य-दृश्य चैनल, विश्व की सभी प्रमुख भाषाओं के लिए — अल्लाह के लिए एक वक्फ़ परियोजना।
               </motion.p>
 
               <motion.div
@@ -1147,7 +1147,7 @@ export default function QuranTranslationLandingPage() {
                     className="h-5 w-5 transition group-hover:rotate-12"
                     style={{ color: ACCENT }}
                   />
-                  اكتشف المنصة
+                  प्लेटफ़ॉर्म देखें
                 </a>
 
                 <a
@@ -1157,7 +1157,7 @@ export default function QuranTranslationLandingPage() {
                   className="inline-flex items-center justify-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/15 sm:px-7 sm:py-4 sm:text-base"
                 >
                   <Play className="h-5 w-5" />
-                  زوروا قناتنا
+                  हमारे चैनल पर जाएँ
                 </a>
               </motion.div>
 
@@ -1181,7 +1181,7 @@ export default function QuranTranslationLandingPage() {
                             ease: "easeInOut",
                           }
                     }
-                    className={`rounded-3xl border border-white/10 ${FRAME_INSET} p-3 text-center backdrop-blur-md shadow-[0_6px_16px_rgba(0,0,0,0.12)] sm:p-4`}
+                    className="rounded-3xl border border-white/10 bg-white/10 p-3 text-center backdrop-blur-md shadow-[0_6px_16px_rgba(0,0,0,0.12)] sm:p-4"
                   >
                     <div className="text-xl font-black sm:text-2xl" style={{ color: ACCENT }}>
                       {item.value}
@@ -1203,23 +1203,23 @@ export default function QuranTranslationLandingPage() {
                 transition={isMobile ? {} : { duration: 7, repeat: Infinity, ease: "easeInOut" }}
                 className={`relative mx-auto max-w-2xl p-3 sm:p-4 ${softCard}`}
               >
-                <div className={`rounded-[1.6rem] border border-white/10 ${FRAME_INSET} p-4 sm:p-6`}>
+                <div className="rounded-[1.6rem] border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-4 sm:p-6">
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <div>
-                      <p className="text-xs text-white/60 sm:text-sm">اللغة الحالية</p>
+                      <p className="text-xs text-white/60 sm:text-sm">वर्तमान भाषा</p>
                       <h3 className="mt-1 text-xl font-bold sm:text-2xl">
-                        القرآن باللغة العربية
+                        हिंदी में कुरआन
                       </h3>
                     </div>
                     <div className="w-fit rounded-2xl border border-emerald-300/20 bg-emerald-400/15 px-4 py-2 text-xs text-emerald-100 sm:text-sm">
-                      بث مباشر
+                      लाइव प्रसारण
                     </div>
                   </div>
 
                   <div className="mt-6 rounded-[1.4rem] border border-white/10 bg-[#0b1d19]/70 p-4 sm:mt-8 sm:p-6">
                     <div className="mb-4 flex items-start gap-3 text-sm text-white/80 sm:items-center sm:text-base">
                       <Headphones className="mt-0.5 h-5 w-5 shrink-0 text-emerald-200 sm:mt-0" />
-                      <span>استمع إلى التلاوة مع عرض بصري لمعاني القرآن الكريم</span>
+                      <span>तिलावत सुनें और कुरआन के अर्थों की दृश्य प्रस्तुति देखें</span>
                     </div>
 
                     {!isMobile && (
@@ -1243,7 +1243,7 @@ export default function QuranTranslationLandingPage() {
                       {heroCards.map((item) => (
                         <div
                           key={item.label}
-                          className={`rounded-2xl border border-white/10 ${FRAME_INSET} p-3 sm:p-4`}
+                          className="rounded-2xl border border-white/10 bg-white/5 p-3 sm:p-4"
                         >
                           <div className="text-sm font-bold sm:text-lg" style={{ color: ACCENT }}>
                             {item.value}
@@ -1266,10 +1266,10 @@ export default function QuranTranslationLandingPage() {
                   return (
                     <div
                       key={item.title}
-                      className={`w-full rounded-[1.4rem] border border-white/10 ${FRAME_INSET} px-5 py-4 text-center backdrop-blur-md shadow-[0_6px_16px_rgba(0,0,0,0.12)] sm:min-w-[220px] sm:w-auto sm:rounded-[1.6rem]`}
+                      className="w-full rounded-[1.4rem] border border-white/10 bg-white/10 px-5 py-4 text-center backdrop-blur-md shadow-[0_6px_16px_rgba(0,0,0,0.12)] sm:min-w-[220px] sm:w-auto sm:rounded-[1.6rem]"
                     >
                       <div className="flex items-center justify-center gap-3">
-                        <div className={`flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 ${FRAME_SOFT} sm:h-11 sm:w-11`}>
+                        <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 sm:h-11 sm:w-11">
                           <Icon className="h-5 w-5" style={{ color: ACCENT }} />
                         </div>
                         <div className="text-sm font-bold text-white sm:text-base">{item.title}</div>
@@ -1289,7 +1289,7 @@ export default function QuranTranslationLandingPage() {
               variants={fadeUp}
               className="mb-8 text-center"
             >
-              <LargeSectionBadge icon={BookOpen} text="هوية قرآنية عالمية" />
+              <LargeSectionBadge icon={BookOpen} text="वैश्विक कुरआनी पहचान" />
             </motion.div>
 
             <div className="space-y-6">
@@ -1322,7 +1322,7 @@ export default function QuranTranslationLandingPage() {
 
           <section className="py-8 lg:py-12">
             <div className="mb-6 text-center">
-              <LargeSectionBadge icon={Building2} text="التنفيذ والإشراف" />
+              <LargeSectionBadge icon={Building2} text="कार्यान्वयन और पर्यवेक्षण" />
             </div>
 
             <motion.div
@@ -1341,23 +1341,23 @@ export default function QuranTranslationLandingPage() {
                   <div className="rounded-[1.8rem] border border-white/10 bg-[#081512]/45 p-4 sm:p-6">
                     <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
                       <h2 className="text-2xl font-black sm:text-3xl lg:text-4xl">
-                        شراكة تنفيذية موثوقة
+                        विश्वसनीय कार्यान्वयन साझेदारी
                       </h2>
                       <p className="mt-5 text-base leading-8 text-white/75 sm:text-lg">
-                        يُنفّذ مشروع{" "}
-                        <span className="font-bold text-white">قنوات سنا القرآنية</span>{" "}
-                        من قبل{" "}
+                        यह परियोजना{" "}
+                        <span className="font-bold text-white">सना कुरआनी चैनल</span>{" "}
+                        द्वारा संचालित है{" "}
                         <span className="font-bold" style={{ color: ACCENT }}>
-                          الشركة السعودية الأردنية للبث الفضائي (جاسكو)
+                          सऊदी-जॉर्डनियन सैटेलाइट ब्रॉडकास्टिंग कंपनी (JASCO)
                         </span>{" "}
-                        – عمّان، الأردن، بخبرة رائدة في مجال الإنتاج والبث الإعلامي.
+                        – अम्मान, जॉर्डन से, मीडिया प्रोडक्शन और प्रसारण में अग्रणी अनुभव के साथ।
                       </p>
                     </div>
                   </div>
 
                   <div className="rounded-[1.8rem] border border-white/10 bg-[#081512]/70 p-4 sm:p-6">
                     <div className="flex h-full flex-col justify-center rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
-                      <div className="text-sm text-white/60">الموقع الرسمي</div>
+                      <div className="text-sm text-white/60">आधिकारिक वेबसाइट</div>
                       <div className="mt-2 text-xl font-bold sm:text-2xl">Jasco Media City</div>
                       <a
                         href="https://jascomediacity.net/"
@@ -1365,7 +1365,7 @@ export default function QuranTranslationLandingPage() {
                         rel="noreferrer"
                         className="mt-5 inline-flex w-fit items-center gap-2 rounded-2xl border border-emerald-200/20 bg-emerald-400/10 px-5 py-3 text-sm text-emerald-100 transition hover:bg-emerald-400/20 sm:text-base"
                       >
-                        قم بزيارة موقع Jasco
+                        Jasco वेबसाइट देखें
                         <ExternalLink className="h-4 w-4" />
                       </a>
                     </div>
@@ -1383,13 +1383,13 @@ export default function QuranTranslationLandingPage() {
               variants={fadeUp}
               className="mb-10 text-center"
             >
-              {sectionBadge(Sparkles, "مميزات المنصة")}
+              {sectionBadge(Sparkles, "प्लेटफ़ॉर्म की विशेषताएँ")}
               <h2 className="mt-5 text-2xl font-black sm:text-4xl lg:text-5xl">
-                سنا... بلاغ للعالمين
+                सना... सारी दुनिया के लिए संदेश
               </h2>
               <p className="mx-auto mt-4 max-w-3xl text-base leading-8 text-white/70 sm:text-lg">
-                منصة قرآنية تستخدم أحدث الوسائل لإيصال معاني القرآن الكريم إلى
-                العالمين، بأسلوب يجمع بين التأصيل الشرعي والتقنيات الحديثة.
+                एक कुरआनी मंच जो नवीनतम साधनों का उपयोग करके कुरआन के अर्थों को
+                दुनिया तक पहुँचाता है, ऐसी शैली में जो शरई प्रामाणिकता और आधुनिक तकनीक को साथ लाती है।
               </p>
             </motion.div>
 
@@ -1418,8 +1418,8 @@ export default function QuranTranslationLandingPage() {
               variants={fadeUp}
               className="mb-10 text-center"
             >
-              {sectionBadge(Send, "وسائل النشر والوصول")}
-              <h2 className="mt-5 text-2xl font-black sm:text-4xl lg:text-5xl">قنوات حضور متعددة</h2>
+              {sectionBadge(Send, "प्रसार और पहुँच के माध्यम")}
+              <h2 className="mt-5 text-2xl font-black sm:text-4xl lg:text-5xl">उपस्थिति के अनेक माध्यम</h2>
             </motion.div>
 
             <div className="grid gap-5 lg:grid-cols-3">
@@ -1447,11 +1447,11 @@ export default function QuranTranslationLandingPage() {
               variants={fadeUp}
               className="mb-10 text-center"
             >
-              {sectionBadge(Crown, "أعمالنا")}
-              <h2 className="mt-5 text-2xl font-black sm:text-4xl lg:text-5xl">نماذج من أعمالنا</h2>
+              {sectionBadge(Crown, "हमारे कार्य")}
+              <h2 className="mt-5 text-2xl font-black sm:text-4xl lg:text-5xl">हमारे कार्यों के नमूने</h2>
               <p className="mx-auto mt-4 max-w-3xl text-base leading-8 text-white/70 sm:text-lg">
-                تلاوات قرآنية عطرة وترجمة معاني آيات القرآن الكريم لمختلف لغات
-                العالم - سنا... بلاغ للعالمين.
+                सुगंधित कुरआनी तिलावतें और दुनिया की विभिन्न भाषाओं में कुरआन की आयतों के अर्थों का अनुवाद
+                — सना... सारी दुनिया के लिए संदेश।
               </p>
             </motion.div>
 
@@ -1479,13 +1479,13 @@ export default function QuranTranslationLandingPage() {
               variants={fadeUp}
               className="mb-10 text-center"
             >
-              {sectionBadge(Globe, "أثر المشروع")}
+              {sectionBadge(Globe, "परियोजना का प्रभाव")}
               <h2 className="mt-5 text-2xl font-black sm:text-4xl lg:text-5xl">
-                أثر المشروع وانتشاره حول العالم
+                परियोजना का प्रभाव और उसका विश्वव्यापी प्रसार
               </h2>
               <p className="mx-auto mt-4 max-w-3xl text-base leading-8 text-white/70 sm:text-lg">
-                رسالة قرآنية عالمية وفّرت ترجمات موثوقة، وقدّمت تجربة مؤثرة،
-                وساهمت في وصول معاني القرآن الكريم إلى بيوت حول العالم.
+                एक वैश्विक कुरआनी संदेश जिसने विश्वसनीय अनुवाद उपलब्ध कराए, प्रभावशाली अनुभव प्रस्तुत किया,
+                और कुरआन के अर्थों को दुनिया भर के घरों तक पहुँचाने में योगदान दिया।
               </p>
             </motion.div>
 
@@ -1514,11 +1514,11 @@ export default function QuranTranslationLandingPage() {
               variants={fadeUp}
               className="mb-10 text-center"
             >
-              {sectionBadge(Users, "شركاء النجاح")}
-              <h2 className="mt-5 text-2xl font-black sm:text-4xl lg:text-5xl">نجاحٌ صنعه التعاون</h2>
+              {sectionBadge(Users, "सफलता के भागीदार")}
+              <h2 className="mt-5 text-2xl font-black sm:text-4xl lg:text-5xl">सहयोग से बनी सफलता</h2>
               <p className="mx-auto mt-4 max-w-3xl text-base leading-8 text-white/70 sm:text-lg">
-                حقق المشروع نجاحه بفضل تعاون نخبة من الجهات المتميزة، من بينها
-                الجهات الشرعية والإعلامية والإنتاجية والمتطوعون.
+                यह परियोजना विशिष्ट संस्थाओं के सहयोग से सफल हुई, जिनमें
+                शरई, मीडिया, प्रोडक्शन और स्वयंसेवी पक्ष शामिल हैं।
               </p>
             </motion.div>
 
@@ -1548,16 +1548,16 @@ export default function QuranTranslationLandingPage() {
             >
               <div className="text-center">
                 <div
-                  className={`inline-flex max-w-full items-center gap-3 rounded-full border border-white/10 ${FRAME_INSET} px-5 py-3 text-base font-semibold backdrop-blur-md shadow-[0_6px_16px_rgba(0,0,0,0.12)] sm:px-7 sm:py-4 sm:text-lg`}
+                  className="inline-flex max-w-full items-center gap-3 rounded-full border border-white/10 bg-white/10 px-5 py-3 text-base font-semibold backdrop-blur-md shadow-[0_6px_16px_rgba(0,0,0,0.12)] sm:px-7 sm:py-4 sm:text-lg"
                   style={{ color: ACCENT }}
                 >
                   <Sparkles className="h-5 w-5 shrink-0" style={{ color: ACCENT }} />
-                  <span>تواصل معنا</span>
+                  <span>संपर्क करें</span>
                 </div>
 
                 <p className="mx-auto mt-5 max-w-4xl text-base leading-8 text-white/75 sm:text-lg">
-                  سنا رسالة دعوية عالمية، ويسعدنا التواصل معكم واستقبال
-                  استفساراتكم ومقترحاتكم وشراكاتكم في أي وقت بأسلوب واضح ومباشر.
+                  सना एक वैश्विक दावती संदेश है, और हमें आपसे जुड़कर आपके
+                  प्रश्न, सुझाव और साझेदारी प्रस्ताव किसी भी समय स्पष्ट और सीधे रूप में प्राप्त करके खुशी होगी।
                 </p>
               </div>
 
@@ -1566,17 +1566,17 @@ export default function QuranTranslationLandingPage() {
               >
                 <div className="rounded-[2rem] border border-white/10 bg-[#081512]/70 p-4 sm:p-6">
                   <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-4 sm:p-5">
-                    <div className="mb-4 text-xl font-bold sm:text-2xl">اتصل بنا</div>
+                    <div className="mb-4 text-xl font-bold sm:text-2xl">हमसे संपर्क करें</div>
                     <div className="space-y-3 text-white/75">
                       <div className="rounded-2xl bg-white/5 px-4 py-3 text-sm sm:text-base">
-                        فريقنا سيكون سعيدًا بمساعدتكم والرد عليكم في أقرب وقت.
+                        हमारी टीम आपकी सहायता करके और जल्द से जल्द उत्तर देकर प्रसन्न होगी।
                       </div>
                       <a
                         href="mailto:snachannel159@gmail.com"
                         className="flex items-center justify-center gap-3 rounded-2xl border border-emerald-200/20 bg-emerald-400/10 px-4 py-3 text-center text-sm font-semibold text-emerald-100 transition hover:bg-emerald-400/20 sm:text-base"
                       >
                         <Mail className="h-4 w-4" style={{ color: ACCENT }} />
-                        إرسال
+                        भेजें
                       </a>
                     </div>
                   </div>
@@ -1594,7 +1594,7 @@ export default function QuranTranslationLandingPage() {
                   <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-white/15 bg-white/10 shadow-[0_0_18px_rgba(255,255,255,0.06)] backdrop-blur-md sm:h-24 sm:w-24">
                     <img
                       src={sanaLogo}
-                      alt="شعار سنا"
+                      alt="सना लोगो"
                       className="h-14 w-14 object-contain sm:h-16 sm:w-16"
                       loading="lazy"
                       decoding="async"
@@ -1603,27 +1603,27 @@ export default function QuranTranslationLandingPage() {
 
                   <div className="mt-4">
                     <span className="inline-flex rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs text-white/90 sm:px-5 sm:text-sm">
-                      قنوات سنا القرآنية
+                      सना कुरआनी चैनल
                     </span>
                   </div>
 
                   <div className="mt-4 text-2xl font-black sm:text-3xl" style={{ color: ACCENT }}>
-                    سنا... بلاغ للعالمين
+                    सना... सारी दुनिया के लिए संदेश
                   </div>
 
                   <p className="mx-auto mt-4 max-w-[30rem] rounded-[1.4rem] border border-white/10 bg-[rgba(38,67,57,0.55)] px-4 py-4 text-sm leading-7 text-white/78 sm:px-5 sm:text-base sm:leading-8">
-                    قنوات صوتية مرئية لترجمات معاني القرآن الكريم لجميع اللغات
-                    العالمية، في مشروع وقفي يجمع بين جمال العرض ودقة المعنى وروح
-                    الرسالة.
+                    कुरआन के अर्थों के अनुवाद के लिए श्रव्य-दृश्य चैनल,
+                    एक वक्फ़ परियोजना के रूप में, जो प्रस्तुति की सुंदरता, अर्थ की सटीकता और
+                    संदेश की आत्मा को एक साथ लाती है।
                   </p>
                 </div>
 
-                <div className={`rounded-[1.6rem] border border-white/10 ${FRAME_INSET} p-4 sm:p-5 flex flex-col items-center justify-center text-center`}>
+                <div className="rounded-[1.6rem] border border-white/10 bg-white/5 p-4 sm:p-5 flex flex-col items-center justify-center text-center">
                   <div className="mb-5 flex flex-col items-center justify-center gap-4 text-lg font-bold text-white sm:text-xl">
-                    <div className={`flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 ${FRAME_SOFT} shadow-[0_8px_18px_rgba(0,0,0,0.14)]`}>
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 shadow-[0_8px_18px_rgba(0,0,0,0.14)]">
                       <MessageCircle className="h-6 w-6" style={{ color: ACCENT }} />
                     </div>
-                    <span>تفاصيلنا</span>
+                    <span>हमारी जानकारी</span>
                   </div>
 
                   <div className="w-full space-y-4 text-white/72">
@@ -1637,7 +1637,7 @@ export default function QuranTranslationLandingPage() {
 
                     <div className="flex items-center justify-center gap-3 rounded-2xl border border-white/10 bg-[#081512]/50 px-4 py-3 text-sm sm:text-base">
                       <MapPin className="h-4 w-4 shrink-0" style={{ color: ACCENT }} />
-                      عمّان - الأردن
+                      अम्मान - जॉर्डन
                     </div>
                   </div>
 
@@ -1649,27 +1649,27 @@ export default function QuranTranslationLandingPage() {
                       className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 py-3 text-sm font-semibold text-white transition hover:scale-[1.01] hover:bg-white/10"
                     >
                       <Globe className="h-4 w-4" style={{ color: ACCENT }} />
-                      تابعنا على فيسبوك
+                      हमें फ़ेसबुक पर फ़ॉलो करें
                     </a>
 
                     <p className="mt-4 text-center text-sm leading-6 text-white/70">
-                      ابدأ رحلتك القرآنية الآن
+                      अपनी कुरआनी यात्रा अभी शुरू करें
                     </p>
                   </div>
                 </div>
 
                 <div className="rounded-[1.8rem] border border-white/10 bg-[linear-gradient(145deg,rgba(255,255,255,0.08),rgba(255,255,255,0.04))] p-4 backdrop-blur-md sm:p-5 flex flex-col items-center justify-center text-center">
                   <div className="mb-5 flex flex-col items-center justify-center gap-4 text-lg font-bold text-white sm:text-xl">
-                    <div className={`flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 ${FRAME_SOFT} shadow-[0_8px_18px_rgba(0,0,0,0.14)]`}>
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 shadow-[0_8px_18px_rgba(0,0,0,0.14)]">
                       <Link2 className="h-6 w-6" style={{ color: ACCENT }} />
                     </div>
-                    <span>روابط تطبيقنا</span>
+                    <span>हमारे ऐप के लिंक</span>
                   </div>
 
                   <div className="w-full rounded-[1.4rem] border border-white/10 bg-[#081512]/45 p-4">
                     <p className="mb-4 text-sm leading-7 text-white/65">
-                      حمّل التطبيق وابدأ متابعة المحتوى القرآني بسهولة عبر المنصات
-                      الرسمية.
+                      ऐप डाउनलोड करें और आधिकारिक प्लेटफ़ॉर्मों के माध्यम से कुरआनी सामग्री को आसानी से
+                      फ़ॉलो करना शुरू करें।
                     </p>
 
                     <div className="grid gap-3 md:grid-cols-2">
@@ -1708,8 +1708,8 @@ export default function QuranTranslationLandingPage() {
 
                     <div className="mt-5 rounded-[1.4rem] border border-white/10 bg-[#0b1d19]/60 p-4">
                       <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-white/65">
-                        <span>⭐ 4.9 تقييم</span>
-                        <span>🌍 100+ دولة</span>
+                        <span>⭐ 4.9 रेटिंग</span>
+                        <span>🌍 100+ देश</span>
                       </div>
 
                       <a
@@ -1719,7 +1719,7 @@ export default function QuranTranslationLandingPage() {
                         className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl border border-emerald-200/20 bg-emerald-400/10 py-3 text-sm font-bold text-emerald-100 transition hover:scale-[1.01] hover:bg-emerald-400/20"
                       >
                         <Sparkles className="h-4 w-4" />
-                        ابدأ الآن
+                        अभी शुरू करें
                       </a>
                     </div>
                   </div>
@@ -1727,7 +1727,7 @@ export default function QuranTranslationLandingPage() {
               </div>
 
               <div className="mt-8 border-t border-white/10 pt-5 text-center text-xs text-white/55 sm:text-sm">
-                جميع الحقوق محفوظة © قنوات سنا القرآنية.
+                सभी अधिकार सुरक्षित © सना कुरआनी चैनल।
               </div>
             </div>
           </footer>
