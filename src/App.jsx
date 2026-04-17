@@ -1022,16 +1022,16 @@ export default function QuranTranslationLandingPage() {
         dir="ltr"
         className="relative min-h-screen overflow-hidden bg-transparent text-white"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(167,71,255,0.22),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(231,177,76,0.16),transparent_22%),radial-gradient(circle_at_20%_80%,rgba(214,54,93,0.18),transparent_24%),linear-gradient(180deg,#05030D_0%,#12071D_40%,#1A0820_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,#3A022A_0%,#4A0431_52%,#2B011F_100%)]" />
 
         {!isMobile && (
           <>
             <motion.div
-              className="absolute -top-24 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-fuchsia-500/20 blur-3xl"
+              className="absolute -top-24 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-fuchsia-500/10 blur-3xl"
               animate={pulseGlow}
             />
-            <div className="absolute inset-0 opacity-[0.06]">
-              <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:44px_44px]" />
+            <div className="absolute inset-0 opacity-[0.03]">
+              <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:44px_44px]" />
             </div>
           </>
         )}
