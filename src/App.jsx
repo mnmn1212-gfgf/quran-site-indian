@@ -1022,17 +1022,22 @@ export default function QuranTranslationLandingPage() {
         dir="ltr"
         className="relative min-h-screen overflow-hidden bg-transparent text-white"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(167,71,255,0.22),transparent_30%),radial-gradient(circle_at_80%_20%,rgba(231,177,76,0.16),transparent_22%),radial-gradient(circle_at_20%_80%,rgba(214,54,93,0.18),transparent_24%),linear-gradient(180deg,#05030D_0%,#12071D_40%,#1A0820_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(167,71,255,0.18),transparent_24%),radial-gradient(circle_at_82%_14%,rgba(231,177,76,0.10),transparent_18%),radial-gradient(circle_at_50%_55%,rgba(125,42,78,0.18),transparent_34%),linear-gradient(135deg,#13061E_0%,#2F0E3E_38%,#4D1847_68%,#7A223D_100%)]" />
 
         {!isMobile && (
           <>
             <motion.div
-              className="absolute -top-24 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-fuchsia-500/20 blur-3xl"
+              className="absolute -top-24 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-fuchsia-500/12 blur-3xl"
               animate={pulseGlow}
             />
-            <div className="absolute inset-0 opacity-[0.06]">
-              <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:44px_44px]" />
+            <motion.div
+              className="absolute bottom-[-8rem] right-[-5rem] h-[22rem] w-[22rem] rounded-full bg-rose-500/10 blur-3xl"
+              animate={pulseGlow}
+            />
+            <div className="absolute inset-0 opacity-[0.035]">
+              <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:44px_44px]" />
             </div>
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(7,3,12,0.10)_100%)]" />
           </>
         )}
 
